@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV - Elvin Kərimzadə</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <img src="./assets/profil.jpg" alt="Profil Şəkli" class="profile-img" />
+    <div class="contact-info">
+      <h1>Elvin Kərimzadə</h1>
+      <p><strong>Telefon:</strong> +994 99 307 12 04</p>
+      <p><strong>Email:</strong> elvin.karimzade@gmail.com</p>
+      <p><strong>Ünvan:</strong> Bakı, Azərbaycan</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title" onclick="toggleSection('about')">Haqqımda</h2>
+    <div id="about">
+      <p>Məsuliyyətli və yaradıcı bir şəxsəm. Komandada işləməyi, CTF-lərlə işləməyi və yeni texnologiyalar öyrənməyi sevirəm.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title" onclick="toggleSection('education')">Təhsil</h2>
+    <div id="education">
+      <ul id="education-list">
+        <li><strong>Azərbaycan Texniki Universiteti</strong> – İnformasiya Təhlükəsizliyi (2024 - 2028)</li>
+      </ul>
+      <button onclick="addEducation()">Təhsil əlavə et</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title" onclick="toggleSection('experience')">İş Təcrübəsi</h2>
+    <div id="experience">
+      <ul id="experience-list">
+        <li><strong>Web Developer</strong> – Azərbaycan Texniki Universiteti (2024 - Hal-hazırda)</li>
+      </ul>
+      <button onclick="addExperience()">Təcrübə əlavə et</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title" onclick="toggleSection('skills')">Bacarıqlar</h2>
+    <div id="skills">
+      <ul id="skills-list">
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>Python əsasları</li>
+        <li>Git və GitHub</li>
+      </ul>
+      <button onclick="addSkill()">Bacarıq əlavə et</button>
+    </div>
+  </div>
+
+  <div class="download-buttons">
+    <button onclick="downloadFile('./documents/cv-pdf.pdf', 'CV PDF endirilir...')">PDF Yüklə</button>
+    <button onclick="downloadFile('./documents/cv-jpg.jpg', 'CV JPG endirilir...')">JPG Yüklə</button>
+  </div>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
