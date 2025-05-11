@@ -10,49 +10,41 @@
   <div class="header">
     <img src="./assets/profil.jpg" alt="Profil Şəkli" class="profile-img" />
     <div class="contact-info">
-      <h1>Elvin Kərimzadə</h1>
-      <p><strong>Telefon:</strong> +994 99 307 12 04</p>
-      <p><strong>Email:</strong> elvin.karimzade@gmail.com</p>
-      <p><strong>Ünvan:</strong> Bakı, Azərbaycan</p>
+      <h1 id="name"></h1>
+      <p><strong>Telefon:</strong> <span id="phone"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Ünvan:</strong> <span id="address"></span></p>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title" onclick="toggleSection('about')">Haqqımda</h2>
     <div id="about">
-      <p>Məsuliyyətli və yaradıcı bir şəxsəm. Komandada işləməyi, CTF-lərlə işləməyi və yeni texnologiyalar öyrənməyi sevirəm.</p>
+      <p id="about-text"></p>
+      <button onclick="editAbout()">Redaktə et</button>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title" onclick="toggleSection('education')">Təhsil</h2>
     <div id="education">
-      <ul id="education-list">
-        <li><strong>Azərbaycan Texniki Universiteti</strong> – İnformasiya Təhlükəsizliyi (2024 - 2028)</li>
-      </ul>
+      <ul id="education-list"></ul>
       <button onclick="addEducation()">Təhsil əlavə et</button>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title" onclick="toggleSection('experience')">İş Təcrübəsi</h2>
+    <h2 class="section-title" onclick="toggleSection('experience')">İŞ Təcrübəsi</h2>
     <div id="experience">
-      <ul id="experience-list">
-        <li><strong>Web Developer</strong> – Azərbaycan Texniki Universiteti (2024 - Hal-hazırda)</li>
-      </ul>
-      <button onclick="addExperience()">Təcrübə əlavə et</button>
+      <ul id="experience-list"></ul>
+      <button onclick="addExperience()">İŞ təcrübəsi əlavə et</button>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title" onclick="toggleSection('skills')">Bacarıqlar</h2>
     <div id="skills">
-      <ul id="skills-list">
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>Python əsasları</li>
-        <li>Git və GitHub</li>
-      </ul>
+      <ul id="skills-list"></ul>
       <button onclick="addSkill()">Bacarıq əlavə et</button>
     </div>
   </div>
