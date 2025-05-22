@@ -1,59 +1,77 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CV - Elvin Kərimzadə</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Elvin Kərimzadə</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/script.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <div class="left-column">
+      <img src="profile.jpg" alt="Profile Photo" class="profile-photo" />
 
-  <div class="header">
-    <img src="./assets/profil.jpg" alt="Profil Şəkli" class="profile-img" />
-    <div class="contact-info">
-      <h1 id="name"></h1>
-      <p><strong>Telefon:</strong> <span id="phone"></span></p>
-      <p><strong>Email:</strong> <span id="email"></span></p>
-      <p><strong>Ünvan:</strong> <span id="address"></span></p>
+      <div class="section">
+        <h2 class="left-header">Əlaqə</h2>
+        <div class="section-content contact-list-container">
+          <ul class="contact-list"></ul>
+        </div>
+        <label for="addContact">Əlaqə əlavə et: </label>
+        <input type="text" id="addContact" placeholder="+XXXXXXXXXXXX" />
+      </div>
+
+      <div class="section">
+        <h2 class="left-header">Təhsil</h2>
+        <div class="section-content education-list-container">
+          <ul class="education-list"></ul>
+        </div>
+        <label for="addEducation">Təhsil əlavə et: </label>
+        <input type="text" id="addEducation" placeholder="Təhsil əlavə et" />
+      </div>
+
+      <div class="section">
+        <h2 class="left-header">Bacarıqlar</h2>
+        <div class="section-content skills-list-container">
+          <ul class="skills-list"></ul>
+        </div>
+        <label for="addSkill">Bacarıq əlavə et: </label>
+        <input type="text" id="addSkill" placeholder="Bacarıq əlavə et" />
+      </div>
+
+      <div class="section">
+        <h2 class="left-header">Dillər</h2>
+        <div class="section-content languages-list-container">
+          <ul class="languages-list"></ul>
+        </div>
+        <label for="addLang">Dil əlavə et: </label>
+        <input type="text" id="addLang" placeholder="Dil əlavə et" />
+      </div>
+    </div>
+
+    <div class="right-column">
+      <h1>Elvin Kərimzadə</h1>
+      <h2 id="position">Penetration Tester</h2>
+
+      <h2>Profile</h2>
+      <div id="profile-text-wrapper">
+        <p id="profile-text"></p>
+        <button id="edit-profileText" title="Edit">➕</button>
+        <button id="delete-profileText" title="Delete">❌</button>
+      </div>
+
+      <h2>Certifications</h2>
+      <ul class="certification-list"></ul>
+
+      <h2>Olduğum Platformalar</h2>
+      <div id="thm-link-wrapper">
+        <p>
+          Azərbaycan üzrə ilk 50-də olan TryHackMe Profilim: <br />
+          🌐 <a href="#" target="_blank" id="thm-link">tryhackme.com/p/elvin.2007</a>
+        </p>
+        <button id="edit-thmLink" title="Edit">➕</button>
+        <button id="delete-thmLink" title="Delete">❌</button>
+      </div>
     </div>
   </div>
-
-  <div class="section">
-    <h2 class="section-title" onclick="toggleSection('about')">Haqqımda</h2>
-    <div id="about">
-      <p id="about-text"></p>
-      <button onclick="editAbout()">Redaktə et</button>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title" onclick="toggleSection('education')">Təhsil</h2>
-    <div id="education">
-      <ul id="education-list"></ul>
-      <button onclick="addEducation()">Təhsil əlavə et</button>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title" onclick="toggleSection('experience')">İŞ Təcrübəsi</h2>
-    <div id="experience">
-      <ul id="experience-list"></ul>
-      <button onclick="addExperience()">İŞ təcrübəsi əlavə et</button>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title" onclick="toggleSection('skills')">Bacarıqlar</h2>
-    <div id="skills">
-      <ul id="skills-list"></ul>
-      <button onclick="addSkill()">Bacarıq əlavə et</button>
-    </div>
-  </div>
-
-  <div class="download-buttons">
-    <button onclick="downloadFile('./documents/cv-pdf.pdf', 'CV PDF endirilir...')">PDF Yüklə</button>
-    <button onclick="downloadFile('./documents/cv-jpg.jpg', 'CV JPG endirilir...')">JPG Yüklə</button>
-  </div>
-
-  <script src="./assets/script.js"></script>
 </body>
 </html>
